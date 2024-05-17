@@ -1,0 +1,133 @@
+:root {
+    --iphone-main-bg-color: #7371ee;
+    --iphone-second-bg-color: #a1d9d6;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #329929;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #f4f6fc;
+}
+
+#wrapper {
+    position: relative;
+    width: 360px;
+    height: 780px;
+    margin: 40px auto;
+    background-color: var(--iphone-main-bg-color);
+    background-image: linear-gradient(
+        60deg, var(--iphone-main-bg-color) 1%,
+        var(--iphone-second-bg-color) 100%
+    );
+    border-radius: 40px;
+    border: 8px solid #1f1f1f;
+    box-shadow: 0 0 0 6px #1f1f1f, 0 0 0 7px #3a3939, 0 0 0 12px #1b1b1b;
+}
+
+#wrapper::before {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 40px;
+    background-color: #1b1b1b;
+    text-align: center;
+    left: 20%;
+    border-radius: 0 0 36px 36px;
+}
+
+#speaker::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 8px;
+    background-color: #474849;
+    border-radius: 4px;
+    top: 10px;
+    left: calc(50% - 40px);
+}
+
+#camera::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-image: linear-gradient(
+        60deg, #201a52, #494e96
+    );
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #3b3b3b;
+    top: 10px;
+    left: calc(50% + 55px);
+}
+
+.container {
+    position: relative;
+    margin-top: 60px;
+    padding: 0 12px;
+}
+
+#form-location input {
+    width: -webkit-fill-available;
+    border: 0;
+    height: 32px;
+    border-radius: 32px;
+    padding: 0 16px;
+    font-weight: 600;
+    color: #1f6119;
+    margin-bottom: 4px;
+}
+
+#form-location input:focus {
+    outline: none;
+}
+
+#form-location input::placeholder {
+    color: #1f6119;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.location-suggestion {
+    background: rgba(247, 247, 247, 0.3);
+    border-radius: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+    display: none;
+}
+
+.location-item {
+    padding: 6px 12px;
+    border-bottom: 1px solid rgba(247, 247, 247, 0.2);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.location-item:hover {
+    color: #1f6119;
+}

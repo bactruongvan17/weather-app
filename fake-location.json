@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Hung Yen City",
+        "local_names": {
+            "vi": "Hưng Yên",
+            "ko": "흥옌",
+            "uk": "Хинґ'єн",
+            "ja": "フンイエン",
+            "en": "Hung Yen City",
+            "zh": "兴安市",
+            "sr": "Хинг Јен",
+            "sv": "Hung Yen",
+            "fa": "هونگ ین",
+            "ru": "Хынгйен",
+            "nl": "Hưng Yên",
+            "tg": "Вилояти Хунг Ен"
+        },
+        "lat": 20.6568406,
+        "lon": 106.054036,
+        "country": "VN",
+        "state": "Hung Yen Province"
+    },
+    {
+        "name": "Hưng Yên",
+        "local_names": {
+            "vi": "Hưng Yên",
+            "zh": "興安社"
+        },
+        "lat": 9.8461252,
+        "lon": 105.0965668,
+        "country": "VN",
+        "state": "Kien Giang Province"
+    },
+    {
+        "name": "Hưng Yên",
+        "lat": 11.633238,
+        "lon": 106.730032,
+        "country": "VN",
+        "state": "Bình Phước Province"
+    },
+    {
+        "name": "Hongyanxi",
+        "local_names": {
+            "en": "Hongyanxi",
+            "zh": "红岩溪镇"
+        },
+        "lat": 29.2884615,
+        "lon": 109.6234443,
+        "country": "CN",
+        "state": "Hunan"
+    }
+]
