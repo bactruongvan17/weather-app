@@ -33,6 +33,7 @@ html, body {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     background-color: #f4f6fc;
+    overflow-x: hidden;
 }
 
 #wrapper {
