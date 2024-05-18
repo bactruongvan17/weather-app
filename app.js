@@ -1,4 +1,3 @@
-const API_KEY = 'f41e538d2970ae6ffd12cbe4ec6fa906';
 const latDefault = '21.0294498';
 const lonDefault = '105.8544441';
 
@@ -17,7 +16,7 @@ function bootstrap() {
 
 async function queryWeather(lat, lon) {
     // const url = 'http://127.0.0.1:3000/fake-weather.json';
-    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const url = `https://proxy-node-server-5nth.onrender.com/openweathermap/forecast?lat=${lat}&lon=${lon}`;
     const data = await _fetch(url);
 
     _renderWeatherNow(data);
@@ -138,7 +137,7 @@ async function queryLocation() {
     }
 
     // const url = 'http://127.0.0.1:3000/fake-location.json';
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=10&appid=${API_KEY}`;
+    const url = `https://proxy-node-server-5nth.onrender.com/openweathermap/geocoding?location=${input}`;
     const locations = await _fetch(url);
 
     _renderLocationSuggesstion(locations);
