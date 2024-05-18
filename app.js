@@ -17,7 +17,7 @@ function bootstrap() {
 
 async function queryWeather(lat, lon) {
     // const url = 'http://127.0.0.1:3000/fake-weather.json';
-    const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
     const data = await _fetch(url);
 
     _renderWeatherNow(data);
@@ -138,7 +138,7 @@ async function queryLocation() {
     }
 
     // const url = 'http://127.0.0.1:3000/fake-location.json';
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=10&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=10&appid=${API_KEY}`;
     const locations = await _fetch(url);
 
     _renderLocationSuggesstion(locations);
