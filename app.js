@@ -160,7 +160,14 @@ function _renderLocationSuggesstion(locations) {
         elItem.addEventListener('click', () => selectLocation(location.lat, location.lon));
 
         const elName = document.createElement('span');
-        elName.textContent = `${location.name}, ${location.state}, ${location.country}`;
+        const locationName = location.name;
+        if (location.state) {
+            locationName += `, ${location.state}`;
+        }
+        if (location.country) {
+            locationName += `, ${location.country}`;
+        }
+        elName.textContent = locationName;
 
         elItem.appendChild(elName);
 
