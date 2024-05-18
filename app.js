@@ -8,7 +8,7 @@ bootstrap();
 
 function bootstrap() {
     elInputLocation = document.querySelector('#form-location input');
-    elInputLocation.addEventListener('input', _debounce(queryLocation));
+    elInputLocation.addEventListener('input', _debounce(queryLocation, 500));
 
     // query weather default: Vietnam
     queryWeather(latDefault, lonDefault);
@@ -160,7 +160,7 @@ function _renderLocationSuggesstion(locations) {
         elItem.addEventListener('click', () => selectLocation(location.lat, location.lon));
 
         const elName = document.createElement('span');
-        const locationName = location.name;
+        let locationName = location.name;
         if (location.state) {
             locationName += `, ${location.state}`;
         }
